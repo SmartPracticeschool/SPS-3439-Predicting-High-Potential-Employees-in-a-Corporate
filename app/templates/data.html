@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Sample Form</title>
+    <style>
+        .emp
+        {
+            width:300px;
+            height:25px;
+            background-color:#fffbfc;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px;
+        }
+        body
+        {
+            font-family:sans-serif;
+        }
+        #sub
+        {
+            width:200px;
+            height:25px;
+            background-color:#9f6cff;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px;
+        }
+    </style>
+</head>
+<body style="background-color:#6a736c;">
+    <center>
+        {% if result %}
+        <p style="color:red;font-size:30px;"> Attrition: {{result}}</p>
+        {% endif %}
+        {% if err_msg %}
+        <p style="color:red;font-size:15px;">{{err_msg}}</p>
+        {% endif %}
+        <br/>
+        <form method="post" action="/">
+            <input type="text" name="a" class="emp" placeholder="   Enter Dailyrate" required><br/><br/>
+            <input type="text" name="b" class="emp" placeholder="   Enter Distance From Home" required><br/><br/>
+            LifeScience&nbsp;&nbsp; <input type="radio" value="1" name="r1" required>&nbsp;&nbsp;
+            Medical &nbsp;&nbsp; <input type="radio" value="3" name="r1" required>&nbsp;&nbsp;
+            Marketing &nbsp;&nbsp;<input type="radio" value="2" name="r1" required>&nbsp;&nbsp;
+            <br/><br/>
+            Tecnical Degree&nbsp;&nbsp; <input type="radio" value="5" name="r1" required>&nbsp;&nbsp;
+            Human Resources &nbsp;&nbsp;<input type="radio" value="0" name="r1" required>&nbsp;&nbsp;
+            Others &nbsp;&nbsp;<input type="radio" value="4" name="r1" required>&nbsp;&nbsp;
+            <br/><br/>
+            <input type="text" name="d" class="emp" placeholder="   Enter Envirirnment Satisfaction" required><br/><br/>
+            <input type="text" name="e" class="emp" placeholder="   Enter Hourly Rate" required><br/><br/>
+            <input type="text" name="f" class="emp" placeholder="   Enter Monthly rate" required><br/><br/>
+            <input type="text" name="g" class="emp" placeholder="   Enter Training Times Last Year" required><br/><br/>
+            <input type="text" name="h" class="emp" placeholder="   Enter Years With Current Manager" required><br/><br/>
+            <input type="submit" value="Submit" id="sub">
+        </form>
+    </center>
+</body>
+</html>
